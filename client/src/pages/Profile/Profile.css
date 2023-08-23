@@ -1,0 +1,152 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+  padding: 30px;
+
+  & .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 70vw;
+
+    & .photo {
+      width: 500px;
+      height: 500px;
+      padding: 40px;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+      }
+    }
+
+    & .desc {
+      display: flex;
+      flex-direction: column;
+      & h3 {
+        font-size: 50px;
+        color: #e70b53;
+        font-weight: 600;
+        padding: 30px 0;
+      }
+
+      & p {
+        font-size: 30px;
+        padding: 20px 0;
+        color: #e70b53;
+      }
+
+      & span {
+        font-size: 40px;
+        color: #e70b53;
+        padding: 20px 0;
+      }
+
+      & button {
+        font-size: 40px;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #e70b53;
+        background-image: linear-gradient(160deg, #e70b53 0%, #460874 100%);
+        border-radius: 20px;
+        cursor: pointer;
+        margin: 20px 0;
+      }
+    }
+  }
+
+  & .playlist {
+    width: 96vw;
+    margin: 40px auto;
+    & h3 {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    & ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      height: 400px;
+      overflow-y: auto;
+
+      & li {
+        width: 400px;
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & img {
+          width: 400px;
+          height: 230px;
+          object-fit: cover;
+          margin: 20px 0;
+        }
+
+        & .btn {
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          gap: 10px;
+          & a button {
+            padding: 10px 20px;
+            border: 1px solid #e70b53;
+            color: #fff;
+            background-color: #e70b53;
+            border-radius: 10px;
+            margin: auto;
+            font-size: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 978px) {
+  .profile-container {
+    & .profile {
+      flex-direction: column;
+      justify-content: center;
+
+      & .desc {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    & .profile {
+      & .photo {
+        width: 95vw;
+        height: 95vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 775px) {
+  .profile-container {
+    & .playlist {
+      & ul {
+        & li {
+          width: 100%;
+          & img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}

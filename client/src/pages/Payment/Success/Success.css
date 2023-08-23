@@ -1,0 +1,88 @@
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  min-height: 100vh;
+
+  & h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  & .card {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+
+    & .payment {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      & ion-icon {
+        padding: 10px 10px;
+        background-color: green;
+        color: #fff;
+        border-radius: 100%;
+        font-size: 20px;
+      }
+
+      & span {
+        text-align: center;
+        font-size: 30px;
+        color: green;
+      }
+    }
+
+    & .desc {
+      display: flex;
+      align-items: center;
+      & span {
+        text-align: center;
+        font-size: 25px;
+      }
+    }
+
+    & .btn {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+
+      & button {
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #e70b53;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .success-container {
+    & .card {
+      width: 90vw;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .success-container {
+    & .card {
+      & .btn {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+}

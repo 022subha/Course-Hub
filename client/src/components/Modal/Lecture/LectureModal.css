@@ -1,0 +1,146 @@
+.add-lecture-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 50px 20px;
+
+  & .lecture-area {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    & .title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+
+      & h1 {
+        font-size: 30px;
+      }
+
+      & p {
+        text-align: justify;
+        font-size: 20px;
+        color: #888080;
+      }
+    }
+
+    & .lectures {
+      overflow-y: auto;
+      & h3 {
+        font-size: 30px;
+      }
+    }
+
+    & .lectures::-webkit-scrollbar {
+      width: 0;
+      background-color: transparent;
+    }
+  }
+
+  & .form-container {
+    width: 20vw;
+
+    & h3 {
+      font-size: 25px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    & form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      & ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+
+        & li {
+          width: 100%;
+
+          & input {
+            border: 1px solid rgb(59, 58, 58);
+            border-radius: 10px;
+            width: 100%;
+            height: 50px;
+            padding: 10px 20px;
+            font-size: 20px;
+          }
+
+          & input[type="file"] {
+            border: none;
+          }
+        }
+      }
+
+      & video {
+        border: 1px solid black;
+        width: 300px;
+      }
+
+      & button {
+        padding: 10px 25px;
+        color: white;
+        background-color: #e7045b;
+        font-size: 20px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  & .close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #888080;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 3;
+
+    & ion-icon {
+      font-size: 25px;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+.lecture-card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 20px;
+
+  & .desc {
+    & h3 {
+      padding-bottom: 20px;
+      font-size: 20px !important;
+    }
+  }
+
+  & .btn {
+    padding: 10px;
+    color: #e7045b;
+    background-color: #a19b9baa;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+.upload-spinner {
+  text-align: center;
+  margin: 20px 0;
+}
