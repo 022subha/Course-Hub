@@ -43,7 +43,7 @@ export default function RegisterModal({ closeModal, setIsLogin }) {
       bodyContent.append("file", file);
       dispatch(showLoading());
       const response = await axios.post(
-        `http://localhost:5000/api/user/register`,
+        `https://api-coursehub.onrender.com/api/user/register`,
         bodyContent
       );
       dispatch(hideLoading());

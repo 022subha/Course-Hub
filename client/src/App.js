@@ -30,7 +30,7 @@ function App() {
     try {
       dispatch(showLoading());
       const response = await axios.get(
-        `http://localhost:5000/api/user/my-profile`,
+        `https://api-coursehub.onrender.com/api/user/my-profile`,
         { headers: { Authorization: "Bearer " + token } }
       );
       dispatch(hideLoading());

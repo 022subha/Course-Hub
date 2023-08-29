@@ -18,7 +18,7 @@ export default function Users() {
   const getUsers = async (token) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/admin/get-all-users`,
+        `https://api-coursehub.onrender.com/api/admin/get-all-users`,
         { headers: { Authorization: "Bearer " + token } }
       );
 
@@ -36,7 +36,7 @@ export default function Users() {
     try {
       dispatch(showLoading());
       const response = await axios.put(
-        `http://localhost:5000/api/admin/change-user-role/${id}`,
+        `https://api-coursehub.onrender.com/api/admin/change-user-role/${id}`,
         {},
         { headers: { Authorization: "Bearer " + token } }
       );
@@ -58,7 +58,7 @@ export default function Users() {
     try {
       dispatch(showLoading());
       const response = await axios.delete(
-        `http://localhost:5000/api/admin/delete-user/${id}`,
+        `https://api-coursehub.onrender.com/api/admin/delete-user/${id}`,
         { headers: { Authorization: "Bearer " + token } }
       );
       dispatch(hideLoading());

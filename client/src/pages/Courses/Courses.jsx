@@ -20,7 +20,7 @@ const CourseCard = ({ item }) => {
     try {
       dispatch(showLoading());
       const response = await axios.post(
-        `http://localhost:5000/api/user/add-to-playlist`,
+        `https://api-coursehub.onrender.com/api/user/add-to-playlist`,
         { id },
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );
@@ -95,7 +95,7 @@ export default function Courses() {
   const getCourses = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/course/get-all-courses`
+        `https://api-coursehub.onrender.com/api/course/get-all-courses`
       );
 
       const { success, allCourses } = response.data;

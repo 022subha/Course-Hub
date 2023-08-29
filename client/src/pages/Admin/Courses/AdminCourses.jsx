@@ -46,7 +46,7 @@ export default function AdminCourses() {
   const getCourses = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/course/get-all-courses`
+        `https://api-coursehub.onrender.com/api/course/get-all-courses`
       );
 
       const { success, allCourses } = response.data;
@@ -67,7 +67,7 @@ export default function AdminCourses() {
         async onOk() {
           dispatch(showLoading());
           const response = await axios.delete(
-            `http://localhost:5000/api/course/delete-course/${id}`,
+            `https://api-coursehub.onrender.com/api/course/delete-course/${id}`,
             { headers: { Authorization: "Bearer " + token } }
           );
           dispatch(hideLoading());

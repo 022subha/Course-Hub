@@ -15,7 +15,7 @@ export default function Lecture() {
   const getCourseDetails = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/course/get-all-lectures/${courseId}`,
+        `https://api-coursehub.onrender.com/api/course/get-all-lectures/${courseId}`,
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );
 

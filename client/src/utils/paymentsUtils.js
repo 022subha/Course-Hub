@@ -4,11 +4,11 @@ import Cookies from "js-cookie";
 const makePayment = async (amount, user, title) => {
   try {
     const response1 = await axios.get(
-      `http://localhost:5000/api/payment/get-key`,
+      `https://api-coursehub.onrender.com/api/payment/get-key`,
       { headers: { Authorization: "Bearer " + Cookies.get("token") } }
     );
     const response2 = await axios.post(
-      `http://localhost:5000/api/payment/buy-subscription`,
+      `https://api-coursehub.onrender.com/api/payment/buy-subscription`,
       {
         amount,
         plan: title,
@@ -38,7 +38,7 @@ const makePayment = async (amount, user, title) => {
       handler: async (response) => {
         try {
           const verificationResponse = await axios.post(
-            `http://localhost:5000/api/payment/payment-verification`,
+            `https://api-coursehub.onrender.com/api/payment/payment-verification`,
             {
               response,
             },

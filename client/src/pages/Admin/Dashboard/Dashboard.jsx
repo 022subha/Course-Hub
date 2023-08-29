@@ -17,7 +17,7 @@ export default function Dashboard() {
   const getDashboardInfo = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/admin/dashboard-stat`,
+        `https://api-coursehub.onrender.com/api/admin/dashboard-stat`,
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );
       setData(response.data);

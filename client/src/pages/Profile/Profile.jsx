@@ -17,7 +17,7 @@ export default function Profile() {
     try {
       dispatch(showLoading());
       const response = await axios.delete(
-        `http://localhost:5000/api/user/remove-from-playlist/${id}`,
+        `https://api-coursehub.onrender.com/api/user/remove-from-playlist/${id}`,
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );
       dispatch(hideLoading());
@@ -38,7 +38,7 @@ export default function Profile() {
     try {
       dispatch(showLoading());
       const response = await axios.delete(
-        `http://localhost:5000/api/payment/cancel-subscription`,
+        `https://api-coursehub.onrender.com/api/payment/cancel-subscription`,
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );
       dispatch(hideLoading());

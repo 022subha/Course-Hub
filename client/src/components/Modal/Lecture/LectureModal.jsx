@@ -13,7 +13,7 @@ const LectureCard = ({ item, index, courseId, lectures, setLectures }) => {
     try {
       dispatch(showLoading());
       const response = await axios.delete(
-        `http://localhost:5000/api/course/delete-lecture?courseId=${courseId}&lectureId=${item._id}`,
+        `https://api-coursehub.onrender.com/api/course/delete-lecture?courseId=${courseId}&lectureId=${item._id}`,
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );
       dispatch(hideLoading());
@@ -79,7 +79,7 @@ export default function LectureModal({ closeModal, course }) {
   const getCourseDetails = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/course/get-all-lectures/${course._id}`,
+        `https://api-coursehub.onrender.com/api/course/get-all-lectures/${course._id}`,
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );
 
@@ -101,7 +101,7 @@ export default function LectureModal({ closeModal, course }) {
       bodyContent.append("file", file);
       setIsUploading(true);
       const response = await axios.post(
-        `http://localhost:5000/api/course/add-lecture/${id}`,
+        `https://api-coursehub.onrender.com/api/course/add-lecture/${id}`,
         bodyContent,
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );
