@@ -103,7 +103,7 @@ export default function Courses() {
         </div>
         <div className="main-area">
           <div className="courses-area">
-            {courses.map((item, index) => (
+            {courses?.map((item, index) => (
               <CourseCard item={item} key={index} />
             ))}
           </div>
