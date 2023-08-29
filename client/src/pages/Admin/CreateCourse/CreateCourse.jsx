@@ -111,8 +111,8 @@ export default function CreateCourse() {
               >
                 <option value={null}>Select a Category...</option>
                 <option value="Web Development">Web Development</option>
-                <option value="Web Development">Web Development</option>
-                <option value="Web Development">Web Development</option>
+                <option value="OS Fundamentals">OS Fundamentals</option>
+                <option value="DSA">Data Structures & Algorithms</option>
               </select>
             </li>
             <li>
