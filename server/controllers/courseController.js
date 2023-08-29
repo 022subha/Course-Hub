@@ -150,8 +150,9 @@ export const deleteCourse = async (req, res) => {
       users[i].playlist = users[i].playlist.filter((item) => {
         item.course.toString() !== id.toString();
       });
+      await users[i].save();
     }
-    await users.save();
+
     await course.deleteOne();
 
     return res
