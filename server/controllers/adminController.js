@@ -57,7 +57,6 @@ export const deleteUser = async (req, res) => {
       });
 
     await cloudinary.v2.uploader.destroy(user.avatar.public_id);
-    //cancel subscription
     await user.deleteOne();
 
     return res

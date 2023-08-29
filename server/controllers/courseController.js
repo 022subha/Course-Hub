@@ -80,7 +80,7 @@ export const addLectures = async (req, res) => {
   try {
     const { title, description } = req.body;
     const { id } = req.params;
-    const { file } = req.files;
+    const { file } = req?.files;
 
     const course = await Course.findById(id);
 

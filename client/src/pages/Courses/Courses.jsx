@@ -1,4 +1,3 @@
-// import { Pagination } from "@mui/material";
 import { message as msg } from "antd";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -74,23 +73,7 @@ const CourseCard = ({ item }) => {
 };
 
 export default function Courses() {
-  const tags = [
-    "Artificial Intelligence",
-    "Web Development",
-    "Data Structures & Algorithms",
-    "Machine Learning",
-    "App Development",
-  ];
-
   const [courses, setCourses] = useState();
-
-  const itemPerPage = 10;
-
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const handlePageChange = (e, value) => {
-    setCurrentPage(value);
-  };
 
   const getCourses = async () => {
     try {
@@ -119,38 +102,10 @@ export default function Courses() {
           <span>All Courses</span>
         </div>
         <div className="main-area">
-          {/* <div className="search-area">
-            <input type="text" placeholder="Search a Course..." />
-            <div className="search-tag">
-              {tags.map((tag, index) => (
-                <button key={index}>{tag}</button>
-              ))}
-            </div>
-          </div> */}
           <div className="courses-area">
-            {courses
-              ?.slice(currentPage - 1 * itemPerPage, currentPage * itemPerPage)
-              .map((item, index) => (
-                <CourseCard item={item} index={currentPage} key={index} />
-              ))}
-          </div>
-
-          <div className="pagination">
-            {/* <Pagination
-              count={Math.ceil(courses.length / itemPerPage)}
-              siblingCount={1}
-              page={currentPage}
-              onChange={handlePageChange}
-              size="medium"
-              sx={{
-                "& .MuiPaginationItem-root.Mui-selected": {
-                  backgroundColor: "#e70b53",
-                  color: "#fff",
-                  transform: "scale(1.3)",
-                  fontWeight: "600",
-                },
-              }}
-            /> */}
+            {courses.map((item, index) => (
+              <CourseCard item={item} key={index} />
+            ))}
           </div>
         </div>
       </div>

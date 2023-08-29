@@ -13,8 +13,6 @@ import Contact from "./pages/Contact/Contact";
 import Courses from "./pages/Courses/Courses";
 import Home from "./pages/Home/Home";
 import Lecture from "./pages/Lecture/Lecture";
-import ForgotPassword from "./pages/Password/ForgotPassword";
-import ResetPassword from "./pages/Password/ResetPassword";
 import Success from "./pages/Payment/Success/Success";
 import Plans from "./pages/Plans/Plans";
 import Profile from "./pages/Profile/Profile";
@@ -57,13 +55,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/courses" element={<Courses />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/plans" element={<Plans />} />
             <Route path="/payment-success" element={<Success />} />
-            <Route path="/payment-fail" element={<Success />} />
             {(user?.role === "admin" ||
               user?.subscription?.status === "active") && (
               <Route path="/course/:courseId" element={<Lecture />} />

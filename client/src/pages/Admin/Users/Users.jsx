@@ -1,4 +1,4 @@
-import { Alert, Modal, message as msg } from "antd";
+import { Modal, message as msg } from "antd";
 import axios from "axios";
 import Cookies from "js-cookie";
 import React, { useEffect, useState } from "react";

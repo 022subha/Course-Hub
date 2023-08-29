@@ -10,7 +10,6 @@ export default function Lecture() {
   const { courseId } = useParams();
   const [lectures, setLectures] = useState();
   const [active, setActive] = useState(0);
-  const [videoDuration, setVideoDuration] = useState(0);
 
   const getCourseDetails = async () => {
     try {
@@ -27,10 +26,6 @@ export default function Lecture() {
     } catch (error) {
       console.log(error);
     }
-  };
-
-  const handleVideoLoadedMetadata = (e) => {
-    setVideoDuration(e.target.duration);
   };
 
   useEffect(() => {
@@ -51,7 +46,6 @@ export default function Lecture() {
                   loop
                   controls
                   preload="auto"
-                  onLoadedMetadata={handleVideoLoadedMetadata}
                 >
                   <source
                     src={

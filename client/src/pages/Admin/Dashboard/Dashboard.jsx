@@ -1,15 +1,9 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
 import AdminLayout from "../../../components/Layout/AdminLayout/AdminLayout.jsx";
-import {
-  hideLoading,
-  showLoading,
-} from "../../../redux/features/spinnerSlice.js";
 import BarChart from "./BarChart.jsx";
 import "./Dashboard.css";
-import { GraphChart } from "./GraphChart.jsx";
 
 export default function Dashboard() {
   const [data, setData] = useState();
@@ -78,10 +72,6 @@ export default function Dashboard() {
               <span>Since Last Month</span>
             </div>
           </div>
-        </div>
-        <div className="views-graph">
-          <div className="heading">Yearly Views </div>
-          <GraphChart />
         </div>
         <div className="bar-chart">
           <div className="heading">Progress Bar</div>
