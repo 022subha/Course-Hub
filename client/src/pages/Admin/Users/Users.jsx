@@ -18,7 +18,7 @@ export default function Users() {
   const getUsers = async (token) => {
     try {
       const response = await axios.get(
-        `https://api-coursehub.onrender.com/api/admin/get-all-users`,
+        `https://course-hub-api.vercel.app/api/admin/get-all-users`,
         { headers: { Authorization: "Bearer " + token } }
       );
 
@@ -36,7 +36,7 @@ export default function Users() {
     try {
       dispatch(showLoading());
       const response = await axios.put(
-        `https://api-coursehub.onrender.com/api/admin/change-user-role/${id}`,
+        `https://course-hub-api.vercel.app/api/admin/change-user-role/${id}`,
         {},
         { headers: { Authorization: "Bearer " + token } }
       );
@@ -58,7 +58,7 @@ export default function Users() {
     try {
       dispatch(showLoading());
       const response = await axios.delete(
-        `https://api-coursehub.onrender.com/api/admin/delete-user/${id}`,
+        `https://course-hub-api.vercel.app/api/admin/delete-user/${id}`,
         { headers: { Authorization: "Bearer " + token } }
       );
       dispatch(hideLoading());

@@ -46,7 +46,7 @@ export default function CreateCourse() {
       bodyContent.append("file", file);
       dispatch(showLoading());
       const response = await axios.post(
-        `https://api-coursehub.onrender.com/api/course/create-course`,
+        `https://course-hub-api.vercel.app/api/course/create-course`,
         bodyContent,
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );

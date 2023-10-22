@@ -19,7 +19,7 @@ const CourseCard = ({ item }) => {
     try {
       dispatch(showLoading());
       const response = await axios.post(
-        `https://api-coursehub.onrender.com/api/user/add-to-playlist`,
+        `https://course-hub-api.vercel.app/api/user/add-to-playlist`,
         { id },
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );
@@ -78,7 +78,7 @@ export default function Courses() {
   const getCourses = async () => {
     try {
       const response = await axios.get(
-        `https://api-coursehub.onrender.com/api/course/get-all-courses`
+        `https://course-hub-api.vercel.app/api/course/get-all-courses`
       );
 
       const { success, allCourses } = response.data;

@@ -11,7 +11,7 @@ export default function Dashboard() {
   const getDashboardInfo = async () => {
     try {
       const response = await axios.get(
-        `https://api-coursehub.onrender.com/api/admin/dashboard-stat`,
+        `https://course-hub-api.vercel.app/api/admin/dashboard-stat`,
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );
       setData(response.data);

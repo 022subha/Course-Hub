@@ -43,7 +43,7 @@ export default function RegisterModal({ closeModal, setIsLogin }) {
       bodyContent.append("file", file);
       dispatch(showLoading());
       const response = await axios.post(
-        `https://api-coursehub.onrender.com/api/user/register`,
+        `https://course-hub-api.vercel.app/api/user/register`,
         bodyContent
       );
       dispatch(hideLoading());

@@ -28,7 +28,7 @@ function App() {
     try {
       dispatch(showLoading());
       const response = await axios.get(
-        `https://api-coursehub.onrender.com/api/user/my-profile`,
+        `https://course-hub-api.vercel.app/api/user/my-profile`,
         { headers: { Authorization: "Bearer " + token } }
       );
       dispatch(hideLoading());

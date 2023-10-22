@@ -14,7 +14,7 @@ export default function Lecture() {
   const getCourseDetails = async () => {
     try {
       const response = await axios.get(
-        `https://api-coursehub.onrender.com/api/course/get-all-lectures/${courseId}`,
+        `https://course-hub-api.vercel.app/api/course/get-all-lectures/${courseId}`,
         { headers: { Authorization: "Bearer " + Cookies.get("token") } }
       );
 

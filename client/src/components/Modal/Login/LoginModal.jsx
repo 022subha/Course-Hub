@@ -24,7 +24,7 @@ export default function LoginModal({ closeModal, setIsLogin }) {
   const getUser = async (token) => {
     try {
       const response = await axios.get(
-        `https://api-coursehub.onrender.com/api/user/my-profile`,
+        `https://course-hub-api.vercel.app/api/user/my-profile`,
         { headers: { Authorization: "Bearer " + token } }
       );
       dispatch(setUser(response.data.user));
@@ -38,7 +38,7 @@ export default function LoginModal({ closeModal, setIsLogin }) {
     try {
       dispatch(showLoading());
       const response = await axios.post(
-        `https://api-coursehub.onrender.com/api/user/login`,
+        `https://course-hub-api.vercel.app/api/user/login`,
         { email, password }
       );
       dispatch(hideLoading());

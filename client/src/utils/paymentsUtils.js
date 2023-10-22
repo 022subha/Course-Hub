@@ -4,11 +4,11 @@ import Cookies from "js-cookie";
 const makePayment = async (amount, user, title) => {
   try {
     const response1 = await axios.get(
-      `https://api-coursehub.onrender.com/api/payment/get-key`,
+      `https://course-hub-api.vercel.app/api/payment/get-key`,
       { headers: { Authorization: "Bearer " + Cookies.get("token") } }
     );
     const response2 = await axios.post(
-      `https://api-coursehub.onrender.com/api/payment/buy-subscription`,
+      `https://course-hub-api.vercel.app/api/payment/buy-subscription`,
       {
         amount,
         plan: title,
@@ -38,7 +38,7 @@ const makePayment = async (amount, user, title) => {
       handler: async (response) => {
         try {
           const verificationResponse = await axios.post(
-            `https://api-coursehub.onrender.com/api/payment/payment-verification`,
+            `https://course-hub-api.vercel.app/api/payment/payment-verification`,
             {
               response,
             },
