@@ -14,7 +14,7 @@ export default function About() {
 
         <div className="about">
           <div className="image">
-            <img src="/assets/images/about.jpg" alt="" />
+            <img src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
           </div>
           <div className="info">
             <h3>About Us</h3>
